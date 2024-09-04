@@ -1,0 +1,38 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.shop-iconbutton {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  @include flex-center-center;
+  // border: 1px solid $mainColor;
+  svg {
+    color: $secondaryColor;
+  }
+  .shop-badge {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: -2px;
+    right: -2px;
+    background-color: $red;
+    border: 1px solid $mainBackground;
+  }
+}
+
+.shop-dark {
+  .shop-iconbutton {
+    svg {
+      color: $secondaryColorDark;
+    }
+    .shop-badge {
+      background-color: $redDark;
+      border: 1px solid $mainBackgroundDark;
+    }
+  }
+}

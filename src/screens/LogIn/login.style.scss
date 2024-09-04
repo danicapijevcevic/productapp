@@ -1,0 +1,14 @@
+@import "../../style/mixins.scss";
+@import "../../style/colors.scss";
+
+.shop-loginscreen {
+  height: 100vh;
+  @include flex-center-center;
+  background-color: $mainBackground;
+}
+
+.shop-dark {
+  .shop-loginscreen {
+    background-color: $mainBackgroundDark;
+  }
+}

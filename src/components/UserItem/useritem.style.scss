@@ -1,0 +1,13 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.shop-useritem {
+  margin: $defaultMargin 0;
+  @include flex-start-center;
+  
+  .shop-useritem-key {
+    font-weight: 600;
+    margin-right: $defaultMargin;
+  }
+}

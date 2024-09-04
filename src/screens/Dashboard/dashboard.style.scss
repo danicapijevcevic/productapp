@@ -1,0 +1,55 @@
+@import "../../style/mixins.scss";
+@import "../../style/colors.scss";
+
+.shop-dashboard {
+  height: 100vh;
+  //overflow: auto;
+  background-color: $mainBackground;
+  position: relative;
+  @include flex-between-center;
+  
+} 
+
+
+::-webkit-scrollbar {
+  width: 10px;
+ 
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+ 
+  background: #ffffff
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #af777e;
+  
+  border-radius: 4px;
+}
+.shop-dark {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    //box-shadow: inset 0 0 5px grey;
+    border-radius: 4px;
+    background: #444;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+   background: #888;
+    border-radius: 4px;
+  }
+  .shop-dashboard {
+    background-color: $mainBackgroundDark;
+  }
+}
+
+

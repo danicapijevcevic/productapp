@@ -1,0 +1,25 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.shop-button {
+  cursor: pointer;
+  font-size: 13px;
+  background-color: $primaryButtonColor;
+  padding: 5px;
+  text-align: center;
+  color: $mainBackground;
+  border-radius: 20px;
+  &:hover {
+    background-color: $primaryButtonColorDark;
+  }
+}
+
+.shop-dark {
+  .shop-button {
+    background-color: $primaryButtonColorDark;
+    &:hover {
+      background-color: $primaryButtonColor;
+    }
+  }
+}

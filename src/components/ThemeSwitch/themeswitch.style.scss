@@ -1,0 +1,42 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.shop-themeswitch {
+  cursor: pointer;
+  padding: $smallPadding;
+  background-color: $mainBackground;
+  border-radius: 25px;
+  width: 44px;
+  position: relative;
+  height: 25px;
+  @include light-shadow;
+  svg {
+    color: $secondaryColor;
+  }
+  .shop-teamswitch-img {
+    position: absolute;
+    transition: 0.3s;
+    left: 4px;
+  }
+  .shop-themeswitch-circle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $secondaryColor;
+    top: 7px;
+  }
+}
+.shop-dark {
+  .shop-themeswitch {
+    background-color: $mainBackgroundDark;
+    @include dark-shadow;
+    svg {
+      color: $secondaryColorDark;
+    }
+    .shop-themeswitch-circle {
+      background-color: $secondaryColorDark;
+    }
+  }
+}

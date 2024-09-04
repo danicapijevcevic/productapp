@@ -1,0 +1,28 @@
+@import "../../../style/variables.scss";
+@import "../../../style/colors.scss";
+@import "../../../style/mixins.scss";
+
+.shop-counter {
+  margin: 0 auto;
+  @include flex-between-center;
+  width: 70px;
+  .shop-iconbutton {
+    opacity: 0.5;
+    svg {
+      color: $mainColor;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.shop-dark {
+  .shop-counter {
+    .shop-iconbutton {
+      svg {
+        color: $mainColorDark;
+      }
+    }
+  }
+}

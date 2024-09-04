@@ -1,0 +1,27 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+
+.shop-wrapper {
+  // position: relative;
+  width: calc(100% - 109px);
+  margin-top: 50px;
+  margin-left: 88px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  height: calc(100% - 70px);
+  padding: $defaultMargin;
+ // overflow: auto;
+  //background: linear-gradient(
+  //   to right,
+  //   transparent,
+  //   transparent,
+  //   $primaryButtonColor
+  //);
+  background: $menuBackground
+}
+
+.shop-dark {
+  .shop-wrapper {
+    background: $menuBackgroundDark;
+  }
+}

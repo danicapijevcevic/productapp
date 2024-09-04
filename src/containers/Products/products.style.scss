@@ -1,0 +1,128 @@
+@import "../../style/mixins.scss";
+@import "../../style/colors.scss";
+
+@import "../../style/variables.scss";
+.shop-cart {
+  .shop-table {
+    overflow: auto;
+    height: calc(100vh - 150px);
+     /* width */
+     scrollbar-color: $secondaryColor $secondaryBackground;
+     scrollbar-width: thin; 
+  }
+  table {
+    width: 100%;
+    max-width: 700px;
+    margin-top: $defaultMargin;
+    border-collapse: collapse;
+    thead {
+      td {
+        position: sticky;
+      }
+    }
+    tr {
+      // border-bottom: 1px solid $secondaryBackground;
+      margin-bottom: $defaultPadding;
+      // border-radius: 20px;
+      th,
+      td {
+        min-width: 100px;
+        text-align: center;
+        padding: $defaultPadding 0;
+
+        .shop-iconbutton {
+          margin: 0 auto;
+        }
+        .shop-products-rating {
+          @include flex-between-center;
+          width: 70px;
+          margin: 0 auto;
+          svg {
+            color: $secondaryButtonColor;
+          }
+        }
+      }
+      th {
+        width: 70px;
+        &.shop-products-item {
+          width: 200px;
+          text-align: left;
+        }
+
+        color: $secondaryColor;
+        font-size: 9px;
+        opacity: 0.8;
+      }
+
+      td {
+        padding: $defaultPadding;
+        &.shop-products-item {
+          // width: 200px;
+          @include flex-between-center;
+          div {
+            &:first-child {
+              width: 50px;
+              img {
+                width: 100%;
+              }
+            }
+            &:last-child {
+              width: 300px;
+              text-align: left;
+              padding: 0 $defaultMargin;
+              .shop-smallfont {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      tr:hover {
+        background-color: transparent;
+
+        td {
+          background-color: $mainBackground;
+          overflow: hidden;
+          &:first-child {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+          }
+
+          &:last-child {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+          }
+        }
+        // @include light-shadow;
+      }
+    }
+  }
+}
+.shop-dark {
+
+  .shop-cart {
+    .shop-table {
+  
+       scrollbar-color: $secondaryColorDark $secondaryBackgroundDark;
+     
+    }
+    table {
+      tr {
+       // border-bottom: 1px solid $secondaryBackgroundDark;
+        th {
+          color: $secondaryColorDark !important;
+        }
+      }
+      tbody {
+        tr:hover {
+          td {
+            background-color: $mainBackgroundDark;
+          }
+          // @include light-shadow;
+        }
+      }
+    }
+  }
+}

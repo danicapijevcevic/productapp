@@ -1,0 +1,30 @@
+@import "../../style/mixins.scss";
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+.shop-privacy {
+  height: 100vh;
+  overflow: hidden;
+  background-color: $mainBackground;
+  // position: relative;
+  @include flex-between-center;
+
+  .shop-privacy-content {
+    overflow: auto;
+    height: calc(100vh - 170px);
+    /* width */
+    scrollbar-color: $secondaryColor $secondaryBackground;
+    scrollbar-width: thin;
+    margin-top: 20px;
+    padding-right: 20px;
+    .shop-mediumfont {
+      margin: 25px 0;
+      tab-size: 40px;
+      line-height: 25px;
+    }
+  }
+}
+.shop-dark {
+  .shop-privacy {
+    background-color: $mainBackgroundDark;
+  }
+}

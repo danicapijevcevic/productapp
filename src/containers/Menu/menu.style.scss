@@ -1,0 +1,78 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.shop-menu {
+  height: 100%;
+  width: 50px;
+  background-color: $menuBackground;
+  padding: $smallPadding;
+  position: absolute;
+  left: $defaultMargin;
+  top: $defaultPadding;
+  height: calc(100% - $defaultMargin);
+  border-radius: 12px;
+
+  @include light-shadow;
+
+
+  .shop-menu-logo {
+    height: 50px;
+    background-image: url(../../assets/images/as-logo-vector-45215549-removebg-preview.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .shop-menu-line {
+    height: 1px;
+    border-bottom: 1px solid $secondaryColor;
+    margin: $defaultPadding 0;
+  }
+  .shop-menu-item {
+    @include flex-center-center;
+    margin: $defaultMargin 0;
+    cursor: pointer;
+
+    .shop-mediumfont {
+      font-size: 12px;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    svg {
+    }
+    &.shop-menu-item-heading {
+      border-top: 1px solid $secondaryBackground;
+      padding-top: $defaultMargin;
+
+      .shop-mediumfont {
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.shop-dark {
+  .shop-menu {
+    background-color: $menuBackgroundDark;
+    @include dark-shadow;
+    .shop-menu-line {
+      border-bottom: 1px solid $secondaryBackgroundDark;
+    }
+    .shop-menu-logo {
+      height: 50px;
+      background-image: url(../../assets/images/darklogo.png.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    svg {
+      color: $mainColorDark;
+    }
+    
+  }
+  
+}

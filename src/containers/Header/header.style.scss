@@ -1,0 +1,48 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.shop-header {
+  @include flex-between-center;
+  //  @include light-shadow;
+  padding: $defaultPadding $defaultMargin;
+  position: absolute;
+  top: 0;
+  left: 70px;
+  z-index: 1;
+  width: calc(100% - 70px);
+
+  //border-bottom: 1px solid $secondaryBackground;
+  .shop-header-search {
+    width: 250px;
+
+    position: relative;
+    input {
+      width: 100%;
+      border: none;
+      //border-bottom: 1px solid $secondaryBackground;
+      padding: $mediumPadding $defaultPadding;
+      background-color: $menuBackground;
+      border-radius: 40px;
+      font-size: 12px;
+      //border-radius: $defaultPadding;
+    }
+  }
+  .shop-header-right {
+    width: 125px;
+    @include flex-between-center;
+  }
+}
+.shop-dark {
+  .shop-header {
+    // @include dark-shadow;
+    input {
+     
+      background-color: $menuBackgroundDark;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+}

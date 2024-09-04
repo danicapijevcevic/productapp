@@ -1,0 +1,29 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.shop-login {
+  padding: $defaultPadding;
+  width: 350px;
+  // background-color: $secondaryBackground;
+  border-radius: 8px;
+  .shop-login-title {
+    text-align: center;
+    margin-bottom: $defaultMargin;
+  }
+  p {
+    color: $secondaryColor;
+  }
+  .shop-login-button {
+    padding-top: $defaultMargin;
+  }
+}
+
+.shop-dark {
+  .shop-login {
+    // background-color: $secondaryBackgroundDark;
+    p {
+      color: $secondaryColorDark;
+    }
+  }
+}

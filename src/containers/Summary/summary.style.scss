@@ -1,0 +1,65 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.shop-summary {
+  padding: $defaultMargin;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+  background-color: #eed8db;
+  height: 100vh;
+  z-index: 12;
+  .shop-summary-close {
+    @include flex-center-center;
+    justify-content: flex-end;
+    margin-bottom: $defaultMargin;
+  }
+  .shop-summary-items {
+    margin: 50px 0;
+
+    div {
+      margin: $defaultPadding 0;
+      @include flex-between-center;
+      .shop-mediumfont {
+        font-weight: 600;
+      }
+    }
+  }
+  .shop-summary-promo {
+    @include flex-between-center;
+    input {
+      background: transparent;
+      width: 125px;
+      border: none;
+      outline: none;
+      text-align: right;
+      &::placeholder {
+        opacity: 0.4;
+      }
+    }
+  }
+  .shop-summary-checkout {
+    position: absolute;
+    bottom: $defaultMargin;
+    width: calc(100% - 40px);
+  }
+}
+
+.shop-dark {
+  .shop-summary {
+    background-color: #1a1617;
+    .shop-summary-promo {
+        
+        input {
+         color: white;
+          &::placeholder {
+            opacity: 0.4;
+            color: white;
+          }
+        }
+      }
+  }
+
+}

@@ -1,0 +1,57 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+.shop-toast {
+  position: fixed;
+  top: 65px;
+  padding: $defaultPadding;
+  border-radius: 8px;
+  background-color: $mainBackground;
+  @include light-shadow;
+  z-index: 12;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  font-size: 12px;
+  animation: tost-animation 0.3s linear;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 4px;
+    background-color: red;
+    top: 0;
+    left: 0;
+  }
+  &.shop-toast-success {
+    &:before {
+      background-color: $primaryButtonColor;
+    }
+  }
+}
+.shop-dark {
+  .shop-toast {
+    background-color: $mainBackgroundDark;
+    @include dark-shadow;
+    color: $mainColorDark;
+    &:before {
+      background-color: red;
+    }
+    &.shop-toast-success {
+      &:before {
+        background-color: $primaryButtonColorDark;
+      }
+    }
+  }
+}
+@keyframes toast-animation  {
+  from {
+    top: -100px;
+opacity: 0;
+  }
+to {
+  top: 100px;
+  opacity: 1;
+
+}
+}

@@ -1,0 +1,48 @@
+@import "../../style/variables.scss";
+@import "../../style/colors.scss";
+
+.shop-smallfont {
+  font-size: $smallFont;
+  font-weight: 400;
+  line-height: normal;
+  color: $mainColor;
+}
+
+.shop-mediumfont {
+  font-size: $normalFont;
+  font-weight: 400;
+  line-height: normal;
+  color: $mainColor;
+}
+.shop-largefont {
+  font-size: $largeFont;
+  font-weight: 400;
+  line-height: normal;
+  color: $mainColor;
+}
+
+.shop-extraLargefont {
+  font-size: $extraLargeFont;
+  font-weight: 600;
+  line-height: normal;
+  color: $mainColor;
+}
+
+// dark theme
+
+.shop-dark {
+  .shop-smallfont {
+    color: $mainColorDark;
+  }
+
+  .shop-mediumfont {
+    color: $mainColorDark;
+  }
+  .shop-largefont {
+    color: $mainColorDark;
+  }
+
+  .shop-extraLargefont {
+    color: $mainColorDark;
+  }
+}
